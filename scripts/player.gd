@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
 const SPEED = 1000.0
+const SPRINT_SPEED = 1500.0
 const ACCEL = 5.0
 
 var input: Vector2 = Vector2.ZERO
+var is_sprinting = false
 
 func _ready() -> void:
 	var color_rect = $WhiteScreen
@@ -20,10 +22,12 @@ func get_input() -> Vector2:
 
 func _physics_process(delta):
 	var playerInput = get_input()
+	is_sprinting = Input.is_action_pressed("sprint")
+	var current_speed = SPRINT_SPEED if is_sprinting else SPEED
 	
 	if playerInput != Vector2.ZERO:
-		velocity = lerp(velocity, playerInput * SPEED, delta * ACCEL)
+		velocity = lerp(velocity, playerInput * current_speed, delta * ACCEL)
 	else:
 		velocity = Vector2.ZERO
-
+	
 	move_and_slide()
