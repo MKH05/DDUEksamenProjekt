@@ -7,6 +7,8 @@ const ACCEL = 5.0
 var input: Vector2 = Vector2.ZERO
 var is_sprinting = false
 
+@export var invt: inv
+
 func _ready() -> void:
 	var color_rect = $WhiteScreen
 	var tween = create_tween()

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://df2kssymdtjcp"]
+
+[ext_resource type="Script" uid="uid://xmygox64vmo5" path="res://inventory/inv_ui_slot.gd" id="1_dfngl"]
+
+[node name="INV_UI_SLOT" type="Panel"]
+self_modulate = Color(1, 1, 1, 0.196078)
+z_index = 1
+custom_minimum_size = Vector2(96, 96)
+anchors_preset = -1
+offset_right = 100.0
+offset_bottom = 100.0
+script = ExtResource("1_dfngl")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+
+[node name="item_display" type="Sprite2D" parent="CenterContainer"]
