@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://oaoahxwfrsxo"]
+
+[ext_resource type="Script" uid="uid://dh6c5xnjq238g" path="res://inventory/inv_ui.gd" id="1_f2u1w"]
+[ext_resource type="PackedScene" uid="uid://df2kssymdtjcp" path="res://inventory/inv_ui_slot.tscn" id="2_w82yi"]
+
+[node name="Inv_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_f2u1w")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.45098)
+layout_mode = 0
+offset_left = -250.0
+offset_top = -530.0
+offset_right = 250.0
+offset_bottom = -230.0
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 308.0
+columns = 5
+
+[node name="INV_UI_SLOT" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT2" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT3" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT4" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT5" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT6" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT7" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT8" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT9" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT10" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT11" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT12" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT13" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT14" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
+
+[node name="INV_UI_SLOT15" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
+layout_mode = 2
