@@ -10,8 +10,9 @@ func _ready() -> void:
 	close()
 
 func update_slots():
-	for i in range(min(Inv.items.size(),slots.size())):
-		slots[i].update(Inv.items[i])
+	pass
+	#for i in range(min(Inv.items.size(),slots.size())):
+		#slots[i].update(Inv.items[i])
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("openinv"):
