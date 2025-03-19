@@ -1,16 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://rs2jyx1l6k5f"]
+[gd_scene load_steps=10 format=3 uid="uid://rs2jyx1l6k5f"]
 
 [ext_resource type="Script" uid="uid://bgk51qjq067m" path="res://scripts/database.gd" id="1_lbhrr"]
-[ext_resource type="Script" uid="uid://b4srl355pjpfs" path="res://scripts/player.gd" id="1_yqjtg"]
-[ext_resource type="Script" uid="uid://dvri4et752r00" path="res://scripts/mainmenucamera.gd" id="2_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://cbc4xku0yl8t6" path="res://icon.svg" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bl1ccvpl2v7j5" path="res://player.tscn" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://guqkus8pu4rs" path="res://assets/TileSet/PALands_DEMO/DEMO.png" id="5_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://bgnpmrvo3vnux" path="res://assets/TileSet/RPGW_Caves_v2.1/decorative.png" id="6_gee14"]
 [ext_resource type="Texture2D" uid="uid://0y1gw80ejwmq" path="res://assets/TileSet/RPGW_Caves_v2.1/MainLev2.0.png" id="7_0tnpc"]
-[ext_resource type="PackedScene" uid="uid://bl1ccvpl2v7j5" path="res://player.tscn" id="2_yqjtg"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_lnu2h"]
-radius = 61.9839
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
 texture = ExtResource("5_u5sy4")
