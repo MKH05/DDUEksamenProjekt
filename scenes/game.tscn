@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://rs2jyx1l6k5f"]
+[gd_scene load_steps=19 format=4 uid="uid://rs2jyx1l6k5f"]
 
 [ext_resource type="Script" uid="uid://bgk51qjq067m" path="res://scripts/database.gd" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://b55c454h8r8ko" path="res://assets/TileSet/32x32_DEMO.png" id="2_iywne"]
@@ -2895,6 +2895,18 @@ sources/3 = SubResource("TileSetAtlasSource_gee14")
 sources/4 = SubResource("TileSetAtlasSource_0tnpc")
 sources/5 = SubResource("TileSetAtlasSource_vtaks")
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_iywne"]
+polygon = PackedVector2Array(-16, -3.82357, 16, -3.82357, 16, 16, -16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p57ef"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u5sy4"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gee14"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 2.86768, -16, 3.18631)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("2_iywne")
 texture_region_size = Vector2i(32, 32)
@@ -3433,6 +3445,7 @@ texture_region_size = Vector2i(32, 32)
 14:16/0 = 0
 16:16/0 = 0
 17:16/0 = 0
+17:16/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_iywne")
 18:16/0 = 0
 19:16/0 = 0
 20:16/0 = 0
@@ -3465,6 +3478,7 @@ texture_region_size = Vector2i(32, 32)
 13:17/0 = 0
 15:17/0 = 0
 17:17/0 = 0
+17:17/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_p57ef")
 17:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 2.54905, 16, 2.54905, 16, 16, -16, 16)
 18:17/0 = 0
 19:17/0 = 0
@@ -3500,6 +3514,7 @@ texture_region_size = Vector2i(32, 32)
 15:18/0 = 0
 16:18/0 = 0
 17:18/0 = 0
+17:18/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_u5sy4")
 17:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 18:18/0 = 0
 19:18/0 = 0
@@ -3712,6 +3727,7 @@ texture_region_size = Vector2i(32, 32)
 9:25/0 = 0
 10:25/0 = 0
 17:19/0 = 0
+17:19/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_gee14")
 17:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 4.77946, -16, 5.09809)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
@@ -5800,10 +5816,20 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_iywne"]
 tile_size = Vector2i(32, 32)
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_iywne")
 sources/1 = SubResource("TileSetAtlasSource_p57ef")
 sources/2 = SubResource("TileSetAtlasSource_u5sy4")
+
+[sub_resource type="Environment" id="Environment_0tnpc"]
+background_mode = 3
+tonemap_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 1.31
+glow_bloom = 0.13
+glow_blend_mode = 0
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lbhrr")
@@ -5823,6 +5849,20 @@ tile_set = SubResource("TileSet_iywne")
 
 [node name="Decoration2" type="TileMapLayer" parent="TileMapHandler"]
 
+[node name="CanvasModulate" type="CanvasModulate" parent="TileMapHandler"]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="TileMapHandler"]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="TileMapHandler"]
+rotation = -0.760964
+skew = 0.0942478
+energy = 0.3
+shadow_enabled = true
+shadow_filter = 2
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_yqjtg")]
 z_index = 1
 safe_margin = 0.8
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0tnpc")
