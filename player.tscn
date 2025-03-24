@@ -204,6 +204,7 @@ drag_bottom_margin = 0.1
 script = ExtResource("3_2hs0m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(6, 6)
 texture = ExtResource("3_hqtel")
 hframes = 8
 vframes = 8

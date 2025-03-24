@@ -1,15 +1,13 @@
 extends CharacterBody2D
 
-const SPEED = 1000.0
-const SPRINT_SPEED = 1500.0
+const SPEED = 500.0
+const SPRINT_SPEED = 750.0
 const ACCEL = 5.0
 
 var input: Vector2 = Vector2.ZERO
 var is_sprinting = false
 
 @export var invt: inv
-
-	
 
 func _ready() -> void:
 	var color_rect = $WhiteScreen
