@@ -8,15 +8,7 @@ var input: Vector2 = Vector2.ZERO
 var is_sprinting = false
 
 @export var invt: inv
-@onready var animations = $AnimationPlayer
 
-func updateanimation():
-	var direction = "Down"
-	if velocity.x < 0: direction = "Left"
-	elif velocity.x > 0: direction = "Right"
-	elif velocity.y < 0: direction = "Up"
-	
-	animations.play("Walk" + direction)
 	
 
 func _ready() -> void:
@@ -42,9 +34,9 @@ func _physics_process(delta):
 	else:
 		velocity = Vector2.ZERO
 	
+	
 	move_and_slide()
 	
-	updateanimation()
 
 func player():
 	pass
