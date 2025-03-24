@@ -9,6 +9,8 @@ var is_sprinting = false
 
 @export var invt: inv
 
+	
+
 func _ready() -> void:
 	var color_rect = $WhiteScreen
 	var tween = create_tween()
@@ -32,7 +34,9 @@ func _physics_process(delta):
 	else:
 		velocity = Vector2.ZERO
 	
+	
 	move_and_slide()
+	
 
 func player():
 	pass
