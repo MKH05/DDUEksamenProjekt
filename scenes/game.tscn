@@ -5852,20 +5852,19 @@ tile_set = SubResource("TileSet_iywne")
 
 [node name="Decoration2" type="TileMapLayer" parent="TileMapHandler"]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="TileMapHandler"]
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="TileMapHandler"]
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="TileMapHandler"]
-rotation = -0.760964
-skew = 0.0942478
-energy = 0.3
-shadow_enabled = true
-shadow_filter = 2
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_yqjtg")]
 z_index = 1
 safe_margin = 0.8
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0tnpc")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(1, 0.870156, 0.740001, 1)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+rotation = -0.760964
+skew = 0.0942478
+energy = 0.3
+shadow_enabled = true
+shadow_filter = 2
