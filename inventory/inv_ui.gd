@@ -6,15 +6,15 @@ extends Control
 var is_open = true
 
 func _ready() -> void:
+	Inv.update.connect(update_slots)
 	update_slots()
 	close()
 
 func update_slots():
-	pass
-	#for i in range(min(Inv.items.size(),slots.size())):
-		#slots[i].update(Inv.items[i])
+	for i in range(min(Inv.slots.size(),slots.size())):
+		slots[i].update(Inv.slots[i])
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("openinv"):
 		if is_open:
 			close()

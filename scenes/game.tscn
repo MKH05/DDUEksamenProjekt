@@ -1,10 +1,12 @@
-[gd_scene load_steps=19 format=4 uid="uid://rs2jyx1l6k5f"]
+[gd_scene load_steps=21 format=4 uid="uid://rs2jyx1l6k5f"]
 
 [ext_resource type="Script" uid="uid://bgk51qjq067m" path="res://scripts/database.gd" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://b55c454h8r8ko" path="res://assets/TileSet/32x32_DEMO.png" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://bl1ccvpl2v7j5" path="res://player.tscn" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://dtlfgoi3g21s6" path="res://assets/TileSet/decorative.png" id="3_p57ef"]
 [ext_resource type="Texture2D" uid="uid://m7j0o8mpwc5f" path="res://assets/TileSet/MainLev2.0.png" id="4_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://c7h4es0iofadr" path="res://inventory/items/item.tscn" id="6_p57ef"]
+[ext_resource type="Resource" uid="uid://dawjwiimq7i8g" path="res://inventory/playerinventory.tres" id="6_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gee14"]
 texture = ExtResource("2_iywne")
@@ -5854,9 +5856,10 @@ tile_set = SubResource("TileSet_iywne")
 
 [node name="Decoration2" type="TileMapLayer" parent="TileMapHandler"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_yqjtg")]
+[node name="Player" parent="." instance=ExtResource("2_yqjtg")]
 z_index = 1
 safe_margin = 0.8
+invt = ExtResource("6_u5sy4")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0tnpc")
@@ -5869,3 +5872,7 @@ rotation = -0.760964
 skew = 0.0942478
 color = Color(1, 0.925057, 0.851175, 1)
 shadow_enabled = true
+
+[node name="item" parent="." instance=ExtResource("6_p57ef")]
+z_index = 1
+position = Vector2(-233, 126)
