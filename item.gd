@@ -62,7 +62,6 @@ func _ready():
 		var texture = load(image_path)
 
 		if texture is Texture:
-			print("Loaded image for: ", selected_item.name)
 			item.texture = texture
 			$Sprite2D.texture = texture
 		else:
@@ -75,7 +74,6 @@ func load_item_resource(item_name: String) -> InvItem:
 	var item_resource = load(resource_path)
 
 	if item_resource is InvItem:
-		print("Loaded resource: ", item_name)
 		return item_resource
 	else:
 		print("Failed to load resource: ", item_name)
