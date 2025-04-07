@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5tfdyu1hxhb7"
-path="res://.godot/imported/RustyScrap.png-697e079da6c11abee2e9eb6db3664c56.ctex"
+uid="uid://cgdhkv4fe5bhi"
+path="res://.godot/imported/Gold scrap.png-fcc9b87ecd18378aba0adc71dc575e13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/RustyScrap.png"
-dest_files=["res://.godot/imported/RustyScrap.png-697e079da6c11abee2e9eb6db3664c56.ctex"]
+source_file="res://assets/trash/Gold scrap.png"
+dest_files=["res://.godot/imported/Gold scrap.png-fcc9b87ecd18378aba0adc71dc575e13.ctex"]
 
 [params]
 

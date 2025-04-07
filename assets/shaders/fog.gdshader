@@ -34,8 +34,8 @@ void fragment() {
 	vec2 uv2 = vec2(UV.x + TIME * .03, UV.y + TIME * .005);
 	float noise1 = blur(perlin_noise, uv1, SCREEN_PIXEL_SIZE).r;
 	float noise2 = blur(cell_noise, uv2, SCREEN_PIXEL_SIZE).r;
-	
+
 	float noise = smoothstep(noise1 * noise2 * 1.0, .0, .15);
-	
+
 	COLOR = vec4(1,1,1, noise);
 }

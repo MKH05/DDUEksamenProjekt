@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bksobrm3dgiwy"
-path="res://.godot/imported/MetalScrap.png-2f6bcb2c57d98a1a58c57f3435d95074.ctex"
+uid="uid://crg4qpqbn7dq"
+path="res://.godot/imported/Red plastic scrap.png-5620e2d61718490423061a1e3e7a7b4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/MetalScrap.png"
-dest_files=["res://.godot/imported/MetalScrap.png-2f6bcb2c57d98a1a58c57f3435d95074.ctex"]
+source_file="res://assets/trash/Red plastic scrap.png"
+dest_files=["res://.godot/imported/Red plastic scrap.png-5620e2d61718490423061a1e3e7a7b4f.ctex"]
 
 [params]
 

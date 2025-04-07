@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7ytrr8kykvx4"
-path="res://.godot/imported/vandflaske-pixilart.png-497e39ddf05817c32883137c56fa87d6.ctex"
+path="res://.godot/imported/Vandflaske.png-005038cb706a6aa06593093268af50da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/vandflaske-pixilart.png"
-dest_files=["res://.godot/imported/vandflaske-pixilart.png-497e39ddf05817c32883137c56fa87d6.ctex"]
+source_file="res://assets/trash/Vandflaske.png"
+dest_files=["res://.godot/imported/Vandflaske.png-005038cb706a6aa06593093268af50da.ctex"]
 
 [params]
 
