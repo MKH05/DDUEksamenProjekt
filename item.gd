@@ -62,6 +62,15 @@ func _ready():
 	var selected_item = get_random_trash()
 	item = InvItem.new()
 	item.name = selected_item.name
+	
+	var image_path = "res://assets/trash/" + selected_item.name + ".png"
+	var texture = load(image_path)
+
+	if texture is Texture:
+		print("Loaded image for: ", selected_item.name)
+		item.texture = texture
+		$Sprite2D.texture = texture
+	
 	var range = point_range.get(selected_item.rarity, {"min": 0, "max": 0})
 	point = randi() % (range.max - range.min + 1) + range.min
 	print("Selected item: ", selected_item.name, " | Rarity: ", selected_item.rarity, " | Points: ", point)
