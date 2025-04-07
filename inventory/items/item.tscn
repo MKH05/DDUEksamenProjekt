@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://fg5xwpa0nfmm" path="res://item.gd" id="1_la3j6"]
 [ext_resource type="Resource" uid="uid://cto544otugoji" path="res://inventory/items/item.tres" id="2_6y5c0"]
-[ext_resource type="Texture2D" uid="uid://cgdhkv4fe5bhi" path="res://assets/trash/GoldScrap.png" id="2_g1g08"]
+[ext_resource type="Texture2D" uid="uid://cgdhkv4fe5bhi" path="res://assets/trash/Gold scrap.png" id="2_g1g08"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6y5c0"]
 radius = 50.01

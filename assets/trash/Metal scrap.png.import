@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgdhkv4fe5bhi"
-path="res://.godot/imported/GoldScrap.png-28e7744eed27773cb7c0d8fb7c2ad7ed.ctex"
+uid="uid://bksobrm3dgiwy"
+path="res://.godot/imported/Metal scrap.png-f7f6585908ba0cd8ec2ee7cc8556dd53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/GoldScrap.png"
-dest_files=["res://.godot/imported/GoldScrap.png-28e7744eed27773cb7c0d8fb7c2ad7ed.ctex"]
+source_file="res://assets/trash/Metal scrap.png"
+dest_files=["res://.godot/imported/Metal scrap.png-f7f6585908ba0cd8ec2ee7cc8556dd53.ctex"]
 
 [params]
 

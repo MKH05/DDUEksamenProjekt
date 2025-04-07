@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3dmwt8daf4pu"
-path="res://.godot/imported/PlatinumScrap.png-c003b4df7c19116ec35cfdfdc9790b66.ctex"
+path="res://.godot/imported/Platinum scrap.png-3bc55821cfa150514c55db54165d3a45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/PlatinumScrap.png"
-dest_files=["res://.godot/imported/PlatinumScrap.png-c003b4df7c19116ec35cfdfdc9790b66.ctex"]
+source_file="res://assets/trash/Platinum scrap.png"
+dest_files=["res://.godot/imported/Platinum scrap.png-3bc55821cfa150514c55db54165d3a45.ctex"]
 
 [params]
 
