@@ -77,4 +77,7 @@ func player():
 	pass
 
 func collect(item):
-	invt.insert(item)
+	if invt.insert(item):
+		return true
+	else:
+		return false

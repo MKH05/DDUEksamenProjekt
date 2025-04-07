@@ -1,7 +1,6 @@
 extends StaticBody2D
 
 @export var item: InvItem
-@export var point: int
 var player = null
 
 var trash_items = [
@@ -49,31 +48,38 @@ var rarity_weights = {
 	"mythic": 1
 }
 
-var point_range = {
-	"common": {"min": 1, "max": 2},
-	"uncommon": {"min": 3, "max": 6},
-	"rare": {"min": 10, "max": 15},
-	"legendary": {"min": 20, "max": 40},
-	"mythic": {"min": 100, "max": 200}
-}
+var item_path = "res://inventory/items/"
 
 func _ready():
 	randomize()
 	var selected_item = get_random_trash()
-	item = InvItem.new()
-	item.name = selected_item.name
-	
-	var image_path = "res://assets/trash/" + selected_item.name + ".png"
-	var texture = load(image_path)
 
-	if texture is Texture:
-		print("Loaded image for: ", selected_item.name)
-		item.texture = texture
-		$Sprite2D.texture = texture
-	
-	var range = point_range.get(selected_item.rarity, {"min": 0, "max": 0})
-	point = randi() % (range.max - range.min + 1) + range.min
-	print("Selected item: ", selected_item.name, " | Rarity: ", selected_item.rarity, " | Points: ", point)
+	var item_resource = load_item_resource(selected_item.name)
+	if item_resource:
+		item = item_resource
+
+		var image_path = "res://assets/trash/" + selected_item.name + ".png"
+		var texture = load(image_path)
+
+		if texture is Texture:
+			print("Loaded image for: ", selected_item.name)
+			item.texture = texture
+			$Sprite2D.texture = texture
+		else:
+			print("Image not found for: ", selected_item.name)
+
+	print("Selected item: ", selected_item.name, " | Rarity: ", selected_item.rarity)
+
+func load_item_resource(item_name: String) -> InvItem:
+	var resource_path = item_path + item_name + ".tres"
+	var item_resource = load(resource_path)
+
+	if item_resource is InvItem:
+		print("Loaded resource: ", item_name)
+		return item_resource
+	else:
+		print("Failed to load resource: ", item_name)
+		return null
 
 func get_random_trash() -> Dictionary:
 	var weighted_list = []
@@ -90,8 +96,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
 		player = body
 		playercollect()
-		await get_tree().create_timer(0.1).timeout
-		self.queue_free()
 
 func playercollect():
-	player.collect(item)
+	if player.collect(item):
+		await get_tree().create_timer(0.1).timeout
+		self.queue_free()
