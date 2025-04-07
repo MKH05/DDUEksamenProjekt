@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 @export var item: InvItem
+@export var point: int
 var player = null
 
 var trash_items = [
@@ -15,19 +16,22 @@ var trash_items = [
 	{"name": "Plastic junk", "rarity": "common"},
 	{"name": "Red plastic scrap", "rarity": "common"},
 	{"name": "Rubbish bag", "rarity": "common"},
-	{"name": "Rusty scrap", "rarity": "common"},
 	{"name": "Soda can", "rarity": "common"},
-	{"name": "Tin can", "rarity": "common"},
-	{"name": "Tuna can", "rarity": "common"},
 	{"name": "Vandflaske", "rarity": "common"},
+
+	# Uncommon
+	{"name": "Rusty scrap", "rarity": "uncommon"},
+	{"name": "Tin can", "rarity": "uncommon"},
+	{"name": "Tuna can", "rarity": "uncommon"},
 
 	# Rare
 	{"name": "Gold Scrap", "rarity": "rare"},
 	{"name": "Metal Scrap", "rarity": "rare"},
+	{"name": "Broken tablet", "rarity": "rare"},
 
 	# Legendary
 	{"name": "Platinum scrap", "rarity": "legendary"},
-	{"name": "Broken tablet", "rarity": "legendary"},
+	{"name": "Tablet", "rarity": "legendary"},
 
 	# Mythic
 	{"name": "matthew pixel", "rarity": "mythic"},
@@ -45,21 +49,33 @@ var rarity_weights = {
 	"mythic": 1
 }
 
+var point_range = {
+	"common": {"min": 1, "max": 2},
+	"uncommon": {"min": 3, "max": 6},
+	"rare": {"min": 10, "max": 15},
+	"legendary": {"min": 20, "max": 40},
+	"mythic": {"min": 100, "max": 200}
+}
+
 func _ready():
 	randomize()
 	var selected_item = get_random_trash()
-	print("Random trash: ", selected_item)
+	item = InvItem.new()
+	item.name = selected_item.name
+	var range = point_range.get(selected_item.rarity, {"min": 0, "max": 0})
+	point = randi() % (range.max - range.min + 1) + range.min
+	print("Selected item: ", selected_item.name, " | Rarity: ", selected_item.rarity, " | Points: ", point)
 
-func get_random_trash() -> String:
+func get_random_trash() -> Dictionary:
 	var weighted_list = []
 	for trash in trash_items:
 		var weight = rarity_weights.get(trash.rarity, 1)
 		for i in weight:
-			weighted_list.append(trash.name)
+			weighted_list.append(trash)
 	if weighted_list.size() > 0:
 		return weighted_list[randi() % weighted_list.size()]
 	else:
-		return "No trash found"
+		return {"name": "Unknown", "rarity": "Unknown"}
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
