@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=2 format=3 uid="uid://cc0meg3n04po4"]
+
+[ext_resource type="Script" uid="uid://dtfaopnkttk7u" path="res://inventory/inventory_items.gd" id="1_rpdhl"]
+
+[resource]
+script = ExtResource("1_rpdhl")
+name = ""
+metadata/_custom_type_script = "uid://dtfaopnkttk7u"
