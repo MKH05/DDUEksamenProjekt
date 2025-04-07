@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://b4srl355pjpfs" path="res://scripts/player.gd" id="1_hqtel"]
 [ext_resource type="Script" uid="uid://dfhqbg1dxkxtg" path="res://inventory/inventory.gd" id="2_2hs0m"]
-[ext_resource type="Script" uid="uid://dtfaopnkttk7u" path="res://inventory/inventory_items.gd" id="3_1jxqw"]
+[ext_resource type="Script" path="res://inv_slot.gd" id="3_1jxqw"]
 [ext_resource type="Script" uid="uid://dvri4et752r00" path="res://scripts/mainmenucamera.gd" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://csk1lj181ex3c" path="res://assets/sprites/ASTRONAUT SPRITES.png" id="3_hqtel"]
 [ext_resource type="PackedScene" uid="uid://oaoahxwfrsxo" path="res://inventory/inv_ui.tscn" id="5_sweqy"]
 
 [sub_resource type="Resource" id="Resource_dw050"]
 script = ExtResource("2_2hs0m")
-slots = Array[ExtResource("3_1jxqw")]([null, null, null, null, null, null, null, null, null, null, null, null])
+slots = Array[ExtResource("3_1jxqw")]([])
 metadata/_custom_type_script = "uid://dfhqbg1dxkxtg"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
