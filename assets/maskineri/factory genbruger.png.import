@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1yhgin30qwin"
-path="res://.godot/imported/broken recycler.png-a0b373e8ad3fe7ff0358a171b0c32ddd.ctex"
+uid="uid://dtq7ms7sd0scv"
+path="res://.godot/imported/factory genbruger.png-dfa862707f0240d49061f4115dd31d6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/maskinery/broken recycler.png"
-dest_files=["res://.godot/imported/broken recycler.png-a0b373e8ad3fe7ff0358a171b0c32ddd.ctex"]
+source_file="res://assets/maskineri/factory genbruger.png"
+dest_files=["res://.godot/imported/factory genbruger.png-dfa862707f0240d49061f4115dd31d6e.ctex"]
 
 [params]
 
