@@ -60,7 +60,9 @@ func _ready():
 
 		var image_path = "res://assets/trash/" + selected_item.name + ".png"
 		var texture = load(image_path)
-
+		
+		item.rarity = str(selected_item.rarity)
+		
 		if texture is Texture:
 			item.texture = texture
 			$Sprite2D.texture = texture

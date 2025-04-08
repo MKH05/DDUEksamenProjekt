@@ -42,7 +42,6 @@ func update_animation():
 
 	
 	if abs(last_direction.x) > 0.5 and abs(last_direction.y) > 0.5:
-		# Diagonal directions
 		if last_direction.x > 0 and last_direction.y > 0:
 			direction = "DiagDownRight"
 		elif last_direction.x > 0 and last_direction.y < 0:

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7h4es0iofadr"]
 
-[ext_resource type="Script" uid="uid://fg5xwpa0nfmm" path="res://item.gd" id="1_la3j6"]
+[ext_resource type="Script" uid="uid://fg5xwpa0nfmm" path="res://inventory/item.gd" id="1_la3j6"]
 [ext_resource type="Texture2D" uid="uid://cgdhkv4fe5bhi" path="res://assets/trash/Gold scrap.png" id="2_g1g08"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6y5c0"]

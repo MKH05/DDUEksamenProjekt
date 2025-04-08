@@ -22,3 +22,16 @@ func insert(item: InvItem) -> bool:
 			return true
 		else:
 			return false
+
+func remove(item: InvItem) -> bool:
+	var itemslots = slots.filter(func(slot): return slot.item == item)
+	if !itemslots.is_empty():
+		var slot = itemslots[0]
+		slot.amount -= 1
+		if slot.amount <= 0:
+			slot.item = null
+			slot.amount = 0
+		update.emit()
+		return true
+	else:
+		return false
