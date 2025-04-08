@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://do6eg40mmc8p7"
-path="res://.godot/imported/broken rocket.png-7ca48d4f16a1375818f116f6f03cd59a.ctex"
+path="res://.godot/imported/broken rocket.png-6a5b81273b299ff7696997244eb68d50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/maskinery/broken rocket.png"
-dest_files=["res://.godot/imported/broken rocket.png-7ca48d4f16a1375818f116f6f03cd59a.ctex"]
+source_file="res://assets/maskineri/broken rocket.png"
+dest_files=["res://.godot/imported/broken rocket.png-6a5b81273b299ff7696997244eb68d50.ctex"]
 
 [params]
 
