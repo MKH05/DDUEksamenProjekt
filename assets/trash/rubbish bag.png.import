@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx63pmwhtdmef"
-path="res://.godot/imported/rubbish bag.png-04c81a91fe11abe37b690fe86d232408.ctex"
+path="res://.godot/imported/Rubbish bag.png-c95227e32e2b9060b153b91f42ee39d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/rubbish bag.png"
-dest_files=["res://.godot/imported/rubbish bag.png-04c81a91fe11abe37b690fe86d232408.ctex"]
+source_file="res://assets/trash/Rubbish bag.png"
+dest_files=["res://.godot/imported/Rubbish bag.png-c95227e32e2b9060b153b91f42ee39d7.ctex"]
 
 [params]
 

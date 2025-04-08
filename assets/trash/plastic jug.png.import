@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3fx3wevf6aft"
-path="res://.godot/imported/plastic jug.png-b623a6be7795012e421acd934ad0791d.ctex"
+path="res://.godot/imported/Plastic jug.png-04df89b5ed0a501988ad561e15af5e39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/plastic jug.png"
-dest_files=["res://.godot/imported/plastic jug.png-b623a6be7795012e421acd934ad0791d.ctex"]
+source_file="res://assets/trash/Plastic jug.png"
+dest_files=["res://.godot/imported/Plastic jug.png-04df89b5ed0a501988ad561e15af5e39.ctex"]
 
 [params]
 
