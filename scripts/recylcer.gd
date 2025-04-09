@@ -5,30 +5,20 @@ signal update
 var player = null
 
 var rarity_points = {
-	"common": 1,
-	"uncommon": 3,
-	"rare": 7,
-	"legendary": 15,
-	"mythic": 30
+	"common": Vector2i(1, 3),
+	"uncommon": Vector2i(3, 5),
+	"rare": Vector2i(6, 10),
+	"legendary": Vector2i(12, 20),
+	"mythic": Vector2i(25, 40)
 }
 
 func _ready() -> void:
-	pass
+	randomize()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
 		player = body
-		var total_points = 0
+		var points = await player.invt.recycle_all(rarity_points, get_tree())
+		print("Player scored: ", points, " points!")
 
-		for slot in player.invt.slots:
-			if slot.item != null and slot.amount > 0:
-				var rarity = slot.item.rarity
-				var points_per_item = rarity_points.get(rarity, 0)
-				total_points += points_per_item * slot.amount
-
-				slot.item = null
-				slot.amount = 0
-
-		update.emit()
-		print("Player scored: ", total_points, " points!")
 		update.emit()

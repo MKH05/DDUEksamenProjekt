@@ -80,9 +80,3 @@ func collect(item):
 		return true
 	else:
 		return false
-
-func remove(item):
-	if invt.remove(item):
-		return true
-	else:
-		return false

@@ -23,13 +23,19 @@ func insert(item: InvItem) -> bool:
 		else:
 			return false
 
-func remove(item: InvItem) -> bool:
+func recycle_all(rarity_points: Dictionary, scene_tree: SceneTree) -> int:
+	var total_points = 0
 	for slot in slots:
-		if slot.item == item and slot.amount > 0:
-			slot.amount -= 1
-			if slot.amount <= 0:
-				slot.item = null
-				slot.amount = 0
+		if slot.item != null and slot.amount > 0:
+			var rarity = slot.item.rarity
+			var range = rarity_points.get(rarity, Vector2i(0, 0))
+			var points_per_item = randi_range(range.x, range.y)
+			total_points += points_per_item * slot.amount
+			slot.item = null
+			slot.amount = 0
+			
 			update.emit()
-			return true
-	return false
+			await scene_tree.create_timer(0.25).timeout
+	
+	update.emit()
+	return total_points
