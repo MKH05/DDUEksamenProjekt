@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3fx3wevf6aft"
-path="res://.godot/imported/plastic jug.png-b623a6be7795012e421acd934ad0791d.ctex"
+uid="uid://bj301qies2k2i"
+path="res://.godot/imported/paper cube.png-14555e8ca13d9be9f43775568bb73186.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/plastic jug.png"
-dest_files=["res://.godot/imported/plastic jug.png-b623a6be7795012e421acd934ad0791d.ctex"]
+source_file="res://assets/trash cubes/paper cube.png"
+dest_files=["res://.godot/imported/paper cube.png-14555e8ca13d9be9f43775568bb73186.ctex"]
 
 [params]
 

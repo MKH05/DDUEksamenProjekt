@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3fx3wevf6aft"
-path="res://.godot/imported/plastic jug.png-b623a6be7795012e421acd934ad0791d.ctex"
+uid="uid://2lea6fsf0qav"
+path="res://.godot/imported/upgrader.png-5172d68b33eb311f307bddcc9f4b7097.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/plastic jug.png"
-dest_files=["res://.godot/imported/plastic jug.png-b623a6be7795012e421acd934ad0791d.ctex"]
+source_file="res://assets/maskineri/upgrader.png"
+dest_files=["res://.godot/imported/upgrader.png-5172d68b33eb311f307bddcc9f4b7097.ctex"]
 
 [params]
 
