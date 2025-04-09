@@ -1,20 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://xytx8sgyeiji"]
 
-[ext_resource type="Texture2D" uid="uid://c1yhgin30qwin" path="res://assets/maskinery/broken recycler.png" id="1_17d7v"]
 [ext_resource type="Script" uid="uid://6dmhjssp40bn" path="res://scripts/recylcer.gd" id="1_57ktw"]
+[ext_resource type="Texture2D" uid="uid://bvt73ynil0x4j" path="res://assets/maskineri/rusty genbruger.png" id="2_57ktw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57ktw"]
 size = Vector2(202, 134)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cbmyt"]
-radius = 150.0
+radius = 200.0
 
 [node name="Recylcer" type="StaticBody2D"]
 script = ExtResource("1_57ktw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("1_17d7v")
+texture = ExtResource("2_57ktw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 42)
