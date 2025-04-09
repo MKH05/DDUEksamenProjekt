@@ -38,7 +38,7 @@ func recycle_all(rarity_points: Dictionary, scene_tree: SceneTree, sound_effect:
 				if slot.amount <= 0:
 					slot.item = null
 					slot.amount = 0
-				
+
 				if sound_effect:
 					var random_pitch = randf_range(0.9, 1.1)
 					sound_effect.call(random_pitch)
