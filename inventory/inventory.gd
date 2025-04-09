@@ -23,19 +23,29 @@ func insert(item: InvItem) -> bool:
 		else:
 			return false
 
-func recycle_all(rarity_points: Dictionary, scene_tree: SceneTree) -> int:
+func recycle_all(rarity_points: Dictionary, scene_tree: SceneTree, sound_effect: Callable) -> int:
 	var total_points = 0
 	for slot in slots:
 		if slot.item != null and slot.amount > 0:
 			var rarity = slot.item.rarity
 			var range = rarity_points.get(rarity, Vector2i(0, 0))
 			var points_per_item = randi_range(range.x, range.y)
-			total_points += points_per_item * slot.amount
-			slot.item = null
-			slot.amount = 0
-			
-			update.emit()
-			await scene_tree.create_timer(0.25).timeout
+			total_points += points_per_item
+
+			while slot.amount > 0:
+				slot.amount -= 1
+
+				if slot.amount <= 0:
+					slot.item = null
+					slot.amount = 0
+				
+				if sound_effect:
+					var random_pitch = randf_range(0.9, 1.1)
+					sound_effect.call(random_pitch)
+				
+				update.emit()
+
+				await scene_tree.create_timer(0.25).timeout
 	
 	update.emit()
 	return total_points

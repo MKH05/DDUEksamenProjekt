@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://xytx8sgyeiji"]
+[gd_scene load_steps=6 format=3 uid="uid://xytx8sgyeiji"]
 
 [ext_resource type="Script" uid="uid://6dmhjssp40bn" path="res://scripts/recylcer.gd" id="1_57ktw"]
 [ext_resource type="Texture2D" uid="uid://bvt73ynil0x4j" path="res://assets/maskineri/rusty genbruger.png" id="2_57ktw"]
+[ext_resource type="AudioStream" uid="uid://djh5e5khurgss" path="res://assets/sfx/Recycle.wav" id="3_cbmyt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57ktw"]
 size = Vector2(202, 134)
@@ -24,6 +25,9 @@ shape = SubResource("RectangleShape2D_57ktw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_cbmyt")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_cbmyt")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="child_entered_tree" from="Area2D/CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]

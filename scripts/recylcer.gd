@@ -3,6 +3,7 @@ extends StaticBody2D
 signal update
 
 var player = null
+@onready var sound_effect = $AudioStreamPlayer2D
 
 var rarity_points = {
 	"common": Vector2i(1, 3),
@@ -18,7 +19,11 @@ func _ready() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
 		player = body
-		var points = await player.invt.recycle_all(rarity_points, get_tree())
+		var points = await player.invt.recycle_all(rarity_points, get_tree(), Callable(self, "play_sound"))
 		print("Player scored: ", points, " points!")
 
 		update.emit()
+
+func play_sound(pitch: float) -> void:
+	sound_effect.pitch_scale = pitch
+	sound_effect.play()
