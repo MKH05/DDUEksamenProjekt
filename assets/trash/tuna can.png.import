@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://umug5v2rx7xi"
-path="res://.godot/imported/Tuna can.png-1ec5cc610cb03017bd33244713f7802e.ctex"
+path="res://.godot/imported/tuna can.png-1fbe79b5910c568d6d74c3997c830c96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/Tuna can.png"
-dest_files=["res://.godot/imported/Tuna can.png-1ec5cc610cb03017bd33244713f7802e.ctex"]
+source_file="res://assets/trash/tuna can.png"
+dest_files=["res://.godot/imported/tuna can.png-1fbe79b5910c568d6d74c3997c830c96.ctex"]
 
 [params]
 

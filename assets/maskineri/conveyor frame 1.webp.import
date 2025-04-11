@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3fx3wevf6aft"
-path="res://.godot/imported/plastic jug.png-b623a6be7795012e421acd934ad0791d.ctex"
+uid="uid://be2b7tt0fsywa"
+path="res://.godot/imported/conveyor frame 1.webp-9bac751f2333a737654d7134b4d8d45b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/plastic jug.png"
-dest_files=["res://.godot/imported/plastic jug.png-b623a6be7795012e421acd934ad0791d.ctex"]
+source_file="res://assets/maskineri/conveyor frame 1.webp"
+dest_files=["res://.godot/imported/conveyor frame 1.webp-9bac751f2333a737654d7134b4d8d45b.ctex"]
 
 [params]
 
