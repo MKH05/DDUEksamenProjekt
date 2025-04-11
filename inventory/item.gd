@@ -58,7 +58,7 @@ func _ready():
 	if item_resource:
 		item = item_resource
 
-		var image_path = "res://assets/trash/" + selected_item.name + ".png"
+		var image_path = "res://assets/trash/" + selected_item.name.to_lower()  + ".png"
 		var texture = load(image_path)
 		
 		item.rarity = str(selected_item.rarity)
@@ -72,7 +72,7 @@ func _ready():
 	print("Selected item: ", selected_item.name, " | Rarity: ", selected_item.rarity)
 
 func load_item_resource(item_name: String) -> InvItem:
-	var resource_path = item_path + item_name + ".tres"
+	var resource_path = item_path + item_name.to_lower()  + ".tres"
 	var item_resource = load(resource_path)
 
 	if item_resource is InvItem:
