@@ -1,105 +1,15 @@
-[gd_scene load_steps=34 format=3 uid="uid://bl1ccvpl2v7j5"]
+[gd_scene load_steps=19 format=3 uid="uid://bl1ccvpl2v7j5"]
 
 [ext_resource type="Script" uid="uid://b4srl355pjpfs" path="res://scripts/player.gd" id="1_hqtel"]
 [ext_resource type="Script" uid="uid://dfhqbg1dxkxtg" path="res://inventory/inventory.gd" id="2_2hs0m"]
-[ext_resource type="Script" uid="uid://cjd0dur1fxc3a" path="res://inventory/inv_slot.gd" id="3_1jxqw"]
+[ext_resource type="Script" path="res://inventory/inv_slot.gd" id="3_1jxqw"]
 [ext_resource type="Script" uid="uid://dvri4et752r00" path="res://scripts/mainmenucamera.gd" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://csk1lj181ex3c" path="res://assets/sprites/ASTRONAUT SPRITES.png" id="3_hqtel"]
 [ext_resource type="PackedScene" uid="uid://oaoahxwfrsxo" path="res://inventory/inv_ui.tscn" id="5_sweqy"]
 
-[sub_resource type="Resource" id="Resource_2hs0m"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_1jxqw"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_b26j0"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_n7ghd"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_nvl01"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_ivps1"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_urp6f"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_bwjto"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_606se"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_u1c27"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_op7ga"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_q13i1"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_pylmc"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_pbfsw"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
-[sub_resource type="Resource" id="Resource_5tmop"]
-script = ExtResource("3_1jxqw")
-rarity = ""
-amount = 0
-metadata/_custom_type_script = "uid://cjd0dur1fxc3a"
-
 [sub_resource type="Resource" id="Resource_dw050"]
 script = ExtResource("2_2hs0m")
-slots = Array[ExtResource("3_1jxqw")]([SubResource("Resource_2hs0m"), SubResource("Resource_1jxqw"), SubResource("Resource_b26j0"), SubResource("Resource_n7ghd"), SubResource("Resource_nvl01"), SubResource("Resource_ivps1"), SubResource("Resource_urp6f"), SubResource("Resource_bwjto"), SubResource("Resource_606se"), SubResource("Resource_u1c27"), SubResource("Resource_op7ga"), SubResource("Resource_q13i1"), SubResource("Resource_pylmc"), SubResource("Resource_pbfsw"), SubResource("Resource_5tmop")])
+slots = Array[ExtResource("3_1jxqw")]([])
 metadata/_custom_type_script = "uid://dfhqbg1dxkxtg"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2hs0m"]
