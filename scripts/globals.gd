@@ -9,3 +9,5 @@ var player_o2: int = 1000
 
 var player_in_area: bool = false
  
+#Gameplay
+var points: int = 0
