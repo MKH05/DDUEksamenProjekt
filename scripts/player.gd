@@ -23,24 +23,17 @@ func get_input() -> Vector2:
 	new_input.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	new_input.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 
-	
 	if new_input.length() > 1:
 		new_input = new_input.normalized()
 
-	
 	if new_input != Vector2.ZERO:
 		last_direction = new_input
 
 	return new_input
 
 func update_animation():
-	if velocity.length() == 0:
-		animations.stop()
-		return 
-	
 	var direction = ""
 
-	
 	if abs(last_direction.x) > 0.5 and abs(last_direction.y) > 0.5:
 		if last_direction.x > 0 and last_direction.y > 0:
 			direction = "DiagDownRight"
@@ -51,13 +44,15 @@ func update_animation():
 		elif last_direction.x < 0 and last_direction.y < 0:
 			direction = "DiagUpLeft"
 	else:
-		
 		if abs(last_direction.x) > abs(last_direction.y):
 			direction = "Right" if last_direction.x > 0 else "Left"
 		else:
 			direction = "Down" if last_direction.y > 0 else "Up"
 
-	animations.play("Walk" + direction)
+	if velocity.length() == 0:
+		animations.play("Idle" + direction)
+	else:
+		animations.play("Walk" + direction)
 
 func _physics_process(delta):
 	var player_input = get_input()
