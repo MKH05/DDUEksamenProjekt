@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://0qy7pb7nx5yh" path="res://scripts/factory_area.gd" id="1_gu2n5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_127uw"]
-size = Vector2(2500, 1500)
+size = Vector2(3500, 1500)
 
 [node name="FactoryArea" type="StaticBody2D"]
 script = ExtResource("1_gu2n5")
@@ -11,6 +11,7 @@ script = ExtResource("1_gu2n5")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(457.5, 0)
 shape = SubResource("RectangleShape2D_127uw")
 debug_color = Color(0.207072, 0.640361, 0, 0.42)
 

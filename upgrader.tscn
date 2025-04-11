@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtq3b5erbrpfe"]
+
+[ext_resource type="Texture2D" uid="uid://2lea6fsf0qav" path="res://assets/maskineri/upgrader.png" id="1_ew7lp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85e30"]
+size = Vector2(238, 179)
+
+[node name="Upgrader" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_ew7lp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 8.5)
+shape = SubResource("RectangleShape2D_85e30")
