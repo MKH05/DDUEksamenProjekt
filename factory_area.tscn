@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://et7w4w5uvsg4"]
+
+[ext_resource type="Script" uid="uid://0qy7pb7nx5yh" path="res://scripts/factory_area.gd" id="1_gu2n5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_127uw"]
+size = Vector2(2500, 1500)
+
+[node name="FactoryArea" type="StaticBody2D"]
+script = ExtResource("1_gu2n5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_127uw")
+debug_color = Color(0.207072, 0.640361, 0, 0.42)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
