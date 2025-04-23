@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3fx3wevf6aft"
-path="res://.godot/imported/plastic jug.png-b623a6be7795012e421acd934ad0791d.ctex"
+uid="uid://iabbk6qpr078"
+path="res://.godot/imported/idl-pixilart.png-ca7ddbde8ee2dcf87ae02edad361cebd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/plastic jug.png"
-dest_files=["res://.godot/imported/plastic jug.png-b623a6be7795012e421acd934ad0791d.ctex"]
+source_file="res://assets/maskineri/idl-pixilart.png"
+dest_files=["res://.godot/imported/idl-pixilart.png-ca7ddbde8ee2dcf87ae02edad361cebd.ctex"]
 
 [params]
 
