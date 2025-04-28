@@ -1,37 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://vbxlj06e2esh"]
+[gd_scene load_steps=6 format=3 uid="uid://vbxlj06e2esh"]
 
 [ext_resource type="Script" uid="uid://c8x1svdxlm2ch" path="res://scripts/loading_bay.gd" id="1_6wtrc"]
 [ext_resource type="Texture2D" uid="uid://bbd4mreta733w" path="res://assets/maskineri/loading bay.webp" id="1_yitcq"]
-[ext_resource type="Texture2D" uid="uid://xny1p55cjew6" path="res://assets/maskineri/rocket.png" id="3_n3hrl"]
-[ext_resource type="Texture2D" uid="uid://iabbk6qpr078" path="res://assets/maskineri/idl-pixilart.png" id="4_0mh0r"]
+[ext_resource type="PackedScene" uid="uid://lash63wqbjg8" path="res://rocket.tscn" id="3_n3hrl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6wtrc"]
 size = Vector2(539, 536)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yitcq"]
 size = Vector2(100, 101)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vu1y1"]
-atlas = ExtResource("4_0mh0r")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lhcrk"]
-atlas = ExtResource("4_0mh0r")
-region = Rect2(0, 64, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6opxo"]
-animations = [{
-"frames": [{
-"duration": 0.4,
-"texture": SubResource("AtlasTexture_vu1y1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lhcrk")
-}],
-"loop": true,
-"name": &"ILD",
-"speed": 12.0
-}]
 
 [node name="LoadingBay" type="StaticBody2D"]
 script = ExtResource("1_6wtrc")
@@ -40,10 +17,7 @@ script = ExtResource("1_6wtrc")
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_yitcq")
 
-[node name="Rocket" type="Sprite2D" parent="."]
-z_index = -1
-scale = Vector2(5, 5)
-texture = ExtResource("3_n3hrl")
+[node name="Rocket" parent="." instance=ExtResource("3_n3hrl")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, 143)
@@ -82,11 +56,5 @@ debug_color = Color(4.13924e-06, 0.64637, 0.238671, 0.42)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
-
-[node name="raket ild" type="AnimatedSprite2D" parent="."]
-position = Vector2(451, 150)
-sprite_frames = SubResource("SpriteFrames_6opxo")
-animation = &"ILD"
-frame_progress = 0.302938
 
 [connection signal="body_entered" from="ColorRect/Area2D" to="." method="_on_area_2d_body_entered"]

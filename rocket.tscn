@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://lash63wqbjg8"]
+
+[ext_resource type="Texture2D" uid="uid://xny1p55cjew6" path="res://assets/maskineri/rocket.png" id="1_5gt1y"]
+[ext_resource type="Texture2D" uid="uid://iabbk6qpr078" path="res://assets/maskineri/ild-pixilart.png" id="2_r2l15"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vu1y1"]
+atlas = ExtResource("2_r2l15")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhcrk"]
+atlas = ExtResource("2_r2l15")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6opxo"]
+animations = [{
+"frames": [{
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_vu1y1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhcrk")
+}],
+"loop": true,
+"name": &"ILD",
+"speed": 12.0
+}]
+
+[node name="Rocket" type="Sprite2D"]
+z_index = -1
+scale = Vector2(5, 5)
+texture = ExtResource("1_5gt1y")
+
+[node name="Ild" type="AnimatedSprite2D" parent="."]
+position = Vector2(3.6, 83.2)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_6opxo")
+animation = &"ILD"
+autoplay = "ILD"
+frame_progress = 0.187388
