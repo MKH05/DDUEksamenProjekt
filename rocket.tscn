@@ -36,4 +36,4 @@ scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_6opxo")
 animation = &"ILD"
 autoplay = "ILD"
-frame_progress = 0.187388
+frame_progress = 0.0727972

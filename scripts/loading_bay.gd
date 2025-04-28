@@ -17,6 +17,9 @@ func launch_rocket():
 	
 	rocket_tween = create_tween()
 	rocket_tween.tween_property($Rocket, "position:y", $Rocket.position.y - 5000, 10.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	await rocket_tween.finished
+	
+	$Rocket.position = rocket_start_position
 
 func _ready() -> void:
 	rocket_start_position = $Rocket.position
