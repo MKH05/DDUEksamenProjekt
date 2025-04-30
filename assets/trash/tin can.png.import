@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0k1icctuh03t"
-path="res://.godot/imported/tin can.png-07cb0a7252a101728060efd4ef21ce97.ctex"
+path="res://.godot/imported/Tin can.png-7e19ecf98950ec545d2301aad20331bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trash/tin can.png"
-dest_files=["res://.godot/imported/tin can.png-07cb0a7252a101728060efd4ef21ce97.ctex"]
+source_file="res://assets/trash/Tin can.png"
+dest_files=["res://.godot/imported/Tin can.png-7e19ecf98950ec545d2301aad20331bf.ctex"]
 
 [params]
 

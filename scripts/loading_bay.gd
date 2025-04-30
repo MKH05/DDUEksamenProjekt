@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 @onready var color_rect = $ColorRect
+@onready var label = $ColorRect/Label2
 @onready var timer = $Timer
 
 var rocket_start_position: Vector2
@@ -24,6 +25,9 @@ func launch_rocket():
 func _ready() -> void:
 	rocket_start_position = $Rocket.position
 
+func _physics_process(delta: float) -> void:
+	label.text = str("Points: ", Globals.points)
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if is_on_cooldown:
 		return
@@ -37,6 +41,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	timer.start()
 	await timer.timeout
+	
+	Globals.money += Globals.points
+	Globals.points = 0
+	
+	print("Money!: ", Globals.money)
 	
 	$Rocket.position = rocket_start_position
 	
