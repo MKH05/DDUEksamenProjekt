@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4srl355pjpfs" path="res://scripts/player.gd" id="1_hqtel"]
 [ext_resource type="Script" uid="uid://dfhqbg1dxkxtg" path="res://inventory/inventory.gd" id="2_2hs0m"]
-[ext_resource type="Script" path="res://inventory/inv_slot.gd" id="3_1jxqw"]
+[ext_resource type="Script" uid="uid://cjd0dur1fxc3a" path="res://inventory/inv_slot.gd" id="3_1jxqw"]
 [ext_resource type="Script" uid="uid://dvri4et752r00" path="res://scripts/mainmenucamera.gd" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://csk1lj181ex3c" path="res://assets/sprites/ASTRONAUT SPRITES.png" id="3_hqtel"]
 [ext_resource type="PackedScene" uid="uid://oaoahxwfrsxo" path="res://inventory/inv_ui.tscn" id="5_sweqy"]
@@ -361,8 +361,8 @@ visible = false
 z_index = 3
 offset_left = -1731.0
 offset_top = -866.0
-offset_right = 4.0
-offset_bottom = 89.0
+offset_right = 2269.0
+offset_bottom = 1134.0
 scale = Vector2(2, 2)
 
 [node name="Inv_UI" parent="." instance=ExtResource("5_sweqy")]

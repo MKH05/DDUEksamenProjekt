@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 Database="*res://scripts/database.gd"
 Globals="*res://scripts/globals.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 ui_left={
