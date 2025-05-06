@@ -68,3 +68,29 @@ layout_mode = 2
 
 [node name="INV_UI_SLOT15" parent="Panel/GridContainer" instance=ExtResource("2_w82yi")]
 layout_mode = 2
+
+[node name="ReuseBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -250.0
+offset_top = -560.0
+offset_right = 250.0
+offset_bottom = -533.0
+value = 100.0
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 254.0
+offset_top = -530.0
+offset_right = 264.0
+offset_bottom = -234.0
+value = 100.0
+fill_mode = 3
+
+[node name="OxygenBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -264.0
+offset_top = -533.0
+offset_right = -254.0
+offset_bottom = -237.0
+value = 100.0
+fill_mode = 3

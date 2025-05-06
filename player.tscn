@@ -361,8 +361,8 @@ visible = false
 z_index = 3
 offset_left = -1731.0
 offset_top = -866.0
-offset_right = 4.0
-offset_bottom = 89.0
+offset_right = 2269.0
+offset_bottom = 1134.0
 scale = Vector2(2, 2)
 
 [node name="Inv_UI" parent="." instance=ExtResource("5_sweqy")]

@@ -17,6 +17,10 @@ func _ready() -> void:
 	if color_rect:
 		color_rect.visible = true
 		tween.tween_property(color_rect, "modulate:a", 0.0, 2.0).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+		
+	while true:
+		Globals.timeplayed += 1
+		await get_tree().create_timer(1.0).timeout
 
 func get_input() -> Vector2:
 	var new_input = Vector2.ZERO
@@ -64,8 +68,21 @@ func _physics_process(delta):
 	else:
 		velocity = Vector2.ZERO
 	
+	handle_oxygen_and_health(delta)
 	update_animation()
 	move_and_slide()
+
+func handle_oxygen_and_health(delta: float) -> void:
+	if Globals.player_in_area:
+		Globals.player_o2 = min(Globals.player_o2 + 1, Globals.player_max_o2)
+	else:
+		Globals.player_o2 = max(Globals.player_o2 - 1, 0)
+		
+		if Globals.player_o2 == 0:
+			Globals.player_health = max(Globals.player_health - 0.01, 0)
+			
+			if Globals.player_health == 0:
+				get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func player():
 	pass

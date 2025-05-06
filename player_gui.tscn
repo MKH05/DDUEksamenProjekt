@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bs6bmrejanorv"]
 
-[ext_resource type="Script" uid="uid://bj1rxv807wfoa" path="res://scripts/oxygen_counter.gd" id="1_ogtmc"]
-[ext_resource type="Texture2D" uid="uid://cvku25atwtx1d" path="res://kenney_ui-pack-space-expansion/Vector/Blue/bar_round_gloss_large.svg" id="2_100ct"]
-[ext_resource type="Script" uid="uid://bs2aqgjhexhns" path="res://scripts/health_oxygen_bar.gd" id="3_uuw4s"]
-[ext_resource type="Texture2D" uid="uid://bo406516frxq7" path="res://kenney_ui-pack-space-expansion/Vector/Red/bar_round_gloss_large.svg" id="4_q14di"]
+[ext_resource type="Script" path="res://scripts/oxygen_counter.gd" id="1_ogtmc"]
+[ext_resource type="Texture2D" uid="uid://cvku25atwtx1d" path="res://assets/kenney_ui-pack-space-expansion/Vector/Blue/bar_round_gloss_large.svg" id="2_100ct"]
+[ext_resource type="Script" path="res://scripts/health_oxygen_bar.gd" id="3_uuw4s"]
+[ext_resource type="Texture2D" uid="uid://bo406516frxq7" path="res://assets/kenney_ui-pack-space-expansion/Vector/Red/bar_round_gloss_large.svg" id="4_q14di"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ogtmc"]
 texture = ExtResource("2_100ct")

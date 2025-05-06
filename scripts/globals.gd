@@ -13,3 +13,6 @@ var player_in_area: bool = false
 var points: int = 0
 var upgrade_mult: int = 1
 var money: int = 0
+
+var reused: int = 999999999
+var timeplayed: int = 0
