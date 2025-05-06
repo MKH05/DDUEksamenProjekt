@@ -17,7 +17,7 @@ func _ready() -> void:
 	if color_rect:
 		color_rect.visible = true
 		tween.tween_property(color_rect, "modulate:a", 0.0, 2.0).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
-		
+	
 	while true:
 		Globals.timeplayed += 1
 		await get_tree().create_timer(1.0).timeout

@@ -7,6 +7,11 @@ extends Control
 @onready var HealthBar = $HealthBar
 @onready var OxygenBar = $OxygenBar
 
+@onready var XLabel = $X
+@onready var YLabel = $Y
+@onready var MoneyLabel = $Money
+@onready var TimeLabel = $TimePlayed
+
 var is_open = true
 
 func _ready() -> void:
@@ -20,7 +25,8 @@ func update_slots():
 
 func _process(_delta: float) -> void:
 	update_bars()
-	
+	update_labels()
+
 	if Input.is_action_just_pressed("openinv"):
 		if is_open:
 			close()
@@ -65,8 +71,14 @@ func update_bars():
 		reuse_fill = StyleBoxFlat.new()
 		ReuseBar.add_theme_stylebox_override("fill", reuse_fill)
 	reuse_fill.bg_color = Color(0.8, 0.4, 0.0)
-	
 
+func update_labels():
+	var player = get_parent()
+	XLabel.text = "X: " + str(int(player.position.x/100))
+	YLabel.text = "Y: " + str(int(player.position.y/100))
+	
+	MoneyLabel.text = "Money: " + str(Globals.money)
+	TimeLabel.text = "Time Played: " + str(Globals.timeplayed)
 
 func open():
 	visible = true
@@ -76,4 +88,3 @@ func open():
 func close():
 	visible = false
 	is_open = false
-	
