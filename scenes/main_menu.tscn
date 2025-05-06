@@ -1,5 +1,6 @@
-[gd_scene load_steps=69 format=3 uid="uid://ynis5724ki4p"]
+[gd_scene load_steps=70 format=3 uid="uid://ynis5724ki4p"]
 
+[ext_resource type="Texture2D" uid="uid://d4dkvjiahmgc8" path="res://assets/sprites/logo_gimal9.png" id="1_lgwnu"]
 [ext_resource type="Shader" uid="uid://ipnmil7qfgkw" path="res://assets/shaders/space.gdshader" id="1_tbmy8"]
 [ext_resource type="Texture2D" uid="uid://cbc4xku0yl8t6" path="res://icon.svg" id="2_jk1qb"]
 [ext_resource type="Shader" uid="uid://b5qmx88ljbqfj" path="res://assets/shaders/outline.gdshader" id="3_5dd4i"]
@@ -424,6 +425,11 @@ adjustment_enabled = true
 
 [node name="MainMenu" type="Node2D"]
 
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(600, 300)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_lgwnu")
+
 [node name="Space" type="Sprite2D" parent="."]
 z_index = -1
 material = SubResource("ShaderMaterial_t5qbp")
@@ -474,8 +480,6 @@ offset_bottom = -279.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Start"
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="WarpSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_jk1qb")

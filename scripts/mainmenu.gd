@@ -1,5 +1,6 @@
 extends Control
 
+@onready var logo = get_node("../Logo")
 @onready var gimal9 = get_node("../Gima-l9")
 @onready var space = get_node("../Space")
 @onready var speed_lines = get_node("../SpeedLines")
@@ -18,6 +19,9 @@ extends Control
 func _on_start_button_pressed() -> void:
 	if speed_lines and speed_lines.material is ShaderMaterial:
 		speed_lines.visible = true
+		
+		$StartButton.visible = false
+		logo.visible = false
 		
 		warpsfx.play()
 		
@@ -78,3 +82,4 @@ func _on_start_button_pressed() -> void:
 		
 		await tween5.finished
 		
+		get_tree().change_scene_to_file("res://scenes/game.tscn")
